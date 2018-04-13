@@ -1,5 +1,8 @@
 # Thundra Lambda Node.js Warmup Wrapper
 
+[![Coverage Status](https://coveralls.io/repos/github/thundra-io/thundra-lambda-nodejs-warmup/badge.svg?branch=master)](https://coveralls.io/github/thundra-io/thundra-lambda-nodejs-warmup?branch=master)
+[![CircleCI](https://circleci.com/gh/thundra-io/thundra-lambda-nodejs-warmup.svg?style=svg)](https://circleci.com/gh/thundra-io/thundra-lambda-nodejs-warmup)
+
 Warm up your lambda and reduce cold starts.
 
 ## Installation
