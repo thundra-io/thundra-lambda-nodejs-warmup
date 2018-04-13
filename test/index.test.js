@@ -1,7 +1,8 @@
 /* eslint-disable no-console */
 const ThundraWarmup = require("../src/index");
 
-
+let consoleOutput;
+console["log"] = jest.fn(input => (consoleOutput = input));
 describe("ThundraWarmup library", () => {
     const warmupWrapper = ThundraWarmup();
     const handler = jest.fn();
