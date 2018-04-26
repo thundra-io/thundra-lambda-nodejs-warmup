@@ -41,6 +41,8 @@ and `async/await`
 ```js
 import thundraWarmup from '@thundra/warmup';
 
+const thundraWarmupWrapper = thundraWarmup();
+
 const handler = thundraWarmupWrapper(async (event, context, callback) => {
     await someAsyncCall();
     callback(null, "No more cold starts!");
