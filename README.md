@@ -35,6 +35,23 @@ exports.handler = thundraWarmupWrapper((event, context, callback) => {
 });
 ```
 
+Here is an example using ES6+
+(see [serverless-webpack plugin](https://github.com/serverless-heaven/serverless-webpack))
+and `async/await`.
+
+```js
+import thundraWarmup from '@thundra/warmup';
+
+const thundraWarmupWrapper = thundraWarmup();
+
+const handler = thundraWarmupWrapper(async (event, context, callback) => {
+    await someAsyncCall();
+    callback(null, "No more cold starts!");
+});
+
+export { handler };
+```
+
 You can also pass an optional callback function which will be called on warmup requests.
 
 ```js
