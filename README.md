@@ -82,3 +82,7 @@ There are two ways to enable warming up for a specific lambda:
 * add your lambda's name to `thundra-lambda-warmup`'s `thundra_lambda_warmup_function` environment variable.
 
 For more detailed information, check out [warmup configuration](https://thundra.readme.io/docs/warmup-configuration).
+
+## Changelog
+
+Please see the [CHANGELOG](CHANGELOG.md) file.
