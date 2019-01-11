@@ -65,6 +65,18 @@ exports.handler = thundraWarmupWrapper((event, context, callback) => {
 });
 ```
 
+And disable `console.log` output.
+
+```js
+const thundraWarmup = require("@thundra/warmup");
+
+const thundraWarmupWrapper = thundraWarmup(null, { logEnabled: false });
+
+exports.handler = thundraWarmupWrapper((event, context, callback) => {
+    callback(null, "No more cold starts!");
+});
+```
+
 `context.succeed`, `context.fail`, `context.done` are also supported.
 
 ```js
