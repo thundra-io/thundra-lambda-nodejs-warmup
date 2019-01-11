@@ -1,6 +1,8 @@
 class WarmupHandler {
-    constructor(extraCallback) {
+    constructor(extraCallback, options) {
         this.extraCallback = extraCallback;
+        options.logEnabled = options.logEnabled === undefined ? true : options.logEnabled;
+        this.options = options;
         this.defaultDelayInMs = 100;
     }
 
@@ -13,8 +15,14 @@ class WarmupHandler {
         }, delayInMs);
     };
 
+    log = (message, optionalParams) => {
+        if (this.options.logEnabled){
+            console.log(message);
+        }
+    }
+
     handleEmptyWarmupRequest = (callback) => {
-        console.log("Thundra Warmup: %d ms delay", this.defaultDelayInMs);
+        this.log("Thundra Warmup: %d ms delay", this.defaultDelayInMs);
         this.setTimeoutEvent(callback, this.defaultDelayInMs);
     };
 
@@ -28,7 +36,7 @@ class WarmupHandler {
                 delayInMs += parseInt(argParts[1]);
         });
 
-        console.log("Thundra Warmup: %d ms delay", delayInMs);
+        this.log("Thundra Warmup: %d ms delay", delayInMs);
         this.setTimeoutEvent(callback, delayInMs);
     };
 
