@@ -1,6 +1,6 @@
 {
   "name": "@thundra/warmup",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Thundra Lambda Warmup Wrapper",
   "main": "dist/thundra-warmup.js",
   "scripts": {

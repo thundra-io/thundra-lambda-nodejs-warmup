@@ -1,6 +1,7 @@
 class WarmupHandler {
     constructor(extraCallback, options) {
         this.extraCallback = extraCallback;
+        options = options ? options : {};
         options.logEnabled = options.logEnabled === undefined ? true : options.logEnabled;
         this.options = options;
         this.defaultDelayInMs = 100;
