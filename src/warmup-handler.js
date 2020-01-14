@@ -16,11 +16,11 @@ class WarmupHandler {
         }, delayInMs);
     };
 
-    log = (message, optionalParams) => {
+    log = (message, optionalParam) => {
         if (this.options.logEnabled){
-            console.log(message);
+            console.log(message, optionalParam);
         }
-    }
+    };
 
     handleEmptyWarmupRequest = (callback) => {
         this.log("Thundra Warmup: %d ms delay", this.defaultDelayInMs);
